@@ -1,0 +1,139 @@
+.bg-light.shadow-sm {
+  width: 220px;
+  min-height: 100vh;
+  border-right: 2px solid #ccc;
+  transition: transform 0.3s ease-in-out;
+}
+.col {
+  padding-left: 30px;
+}
+.pie-section,
+.bar-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.pie-section canvas,
+.bar-section canvas {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.pie-section canvas {
+  max-height: 260px;
+}
+
+.card .card {
+  width: 95% !important;
+  margin: 0 auto 12px auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .bg-light.shadow-sm {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 2px solid #ccc;
+    min-height: auto !important;
+    margin-bottom: 20px;
+  }
+
+  .col {
+    padding-left: 0 !important;
+  }
+  h2.text-center {
+    font-size: 1.5rem;
+  }
+  .card.shadow-sm.p-3,
+  .card.shadow-sm.p-4 {
+    height: auto !important;
+  }
+
+  .card.shadow-sm.p-3 .card-body {
+    padding: 10px !important;
+  }
+  .d-flex.justify-content-center.mb-3.gap-3 {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .col-md-4,
+  .col-md-8 {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .card.shadow-sm.p-3,
+  .card.shadow-sm.p-4 {
+    max-width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .bar-section canvas,
+  .pie-section canvas {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .card .card {
+    width: 95% !important;
+    margin: 0 auto 12px auto;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 576px) {
+  h5,
+  h6 {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .d-flex {
+    flex-direction: column !important;
+  }
+
+  .d-flex .bar-section,
+  .d-flex .legend-section {
+    width: 100% !important;
+  }
+
+  .pie-section canvas {
+    max-height: 180px !important;
+  }
+
+  .card.shadow-sm.p-3,
+  .card.shadow-sm.p-4 {
+    width: 100% !important;
+    margin: 0 0 15px 0;
+  }
+
+  .card .card {
+    width: 95% !important;
+    margin: 0 auto 10px auto;
+  }
+
+  .btn-outline-success,
+  .btn-success {
+    width: 80% !important;
+  }
+  
+}

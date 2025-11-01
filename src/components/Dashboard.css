@@ -1,0 +1,127 @@
+/* Responsive Design Adjustments */
+
+/* For screens below 576px (mobile view) */
+@media (max-width: 576px) {
+  /* Sidebar becomes horizontal at the top */
+  .d-flex.flex-column.p-3.bg-light.shadow-sm {
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 2px solid #ccc;
+    min-height: auto !important;
+    padding: 0.5rem !important;
+  }
+
+  .d-flex.flex-column.p-3.bg-light.shadow-sm button {
+    margin: 5px !important;
+    flex: 1;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* Main content takes full width */
+  .col {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 10px;
+  }
+
+  /* Filters stack vertically */
+  .d-flex.justify-content-center.gap-3.mb-4 {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.8rem !important;
+  }
+
+  .form-select {
+    width: 250px !important;
+  }
+
+  /* Summary cards stack vertically */
+  .d-flex.justify-content-center.gap-3.mb-4 {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .card.text-center.shadow-sm {
+    width: 90% !important;
+  }
+
+  /* Charts Section */
+  .card.shadow-sm.p-3 {
+    height: auto !important;
+    padding: 1rem !important;
+  }
+
+  /* Charts layout vertical */
+  .row.h-100 {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* Pie and Bar Chart both full width */
+  .col-md-4,
+  .col-md-8 {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-md-4 h6,
+  .col-md-8 h6 {
+    text-align: center;
+  }
+
+  /* Adjust Bar Chart + Legend */
+  .col-md-8.d-flex.flex-row.align-items-start.justify-content-between {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .col-md-8.d-flex.flex-row.align-items-start.justify-content-between > div {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  /* Legend under Bar Chart */
+  .col-md-8.d-flex.flex-row.align-items-start.justify-content-between > div:last-child {
+    width: 100% !important;
+    margin-top: 15px;
+    padding-left: 0 !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .col-md-8.d-flex.flex-row.align-items-start.justify-content-between > div:last-child div {
+    margin-right: 8px;
+  }
+
+  /* Chart height reduced for mobile */
+  canvas {
+    max-height: 300px !important;
+  }
+
+  /* Category checkboxes scrollable if too many */
+  .d-flex.flex-wrap.justify-content-center.gap-2.mb-3 {
+    flex-wrap: wrap;
+    max-height: 120px;
+    overflow-y: auto;
+  }
+
+  /* Adjust titles */
+  h2.text-center.mb-4.text-success {
+    font-size: 1.3rem !important;
+  }
+
+  h5,
+  h6 {
+    font-size: 0.9rem !important;
+  }
+
+  span {
+    font-size: 13px !important;
+  }
+}
