@@ -122,14 +122,13 @@ export default function Fileuploading() {
                     <th>Healthcare</th>
                     <th>Education</th>
                     <th>Miscellaneous</th>
-                    <th>Desire_Savings</th>
-                    <th>Financial_Health_Category</th>
+                    <th>Desire_Savings</th>  
                   </tr>
                 </thead>
                 <tbody>
                   {[...Array(4)].map((_, rowIndex) => (
                     <tr key={rowIndex}>
-                      {Array(21)
+                      {Array(20)
                         .fill("")
                         .map((_, colIndex) => (
                           <td key={colIndex}></td>
