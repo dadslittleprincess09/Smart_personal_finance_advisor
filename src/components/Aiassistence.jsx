@@ -25,7 +25,7 @@ const Aiassistence = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ user_input: input }), // 👈 same key as Flask expects
+        body: JSON.stringify({ user_input: input }), 
       });
 
       const data = await response.json();

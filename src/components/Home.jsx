@@ -1,6 +1,6 @@
   import React from "react";
   import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Link } from "react-router-dom";
   const Home = () => {
     return (
       <div>
@@ -10,8 +10,8 @@
           <div className="container">
             <h1 className="display-4">Smart Personal Finance Advisor</h1>  
             <p className="lead">Track your income, expenses, and make smarter financial decisions effortlessly.</p>
-            <a href="/forms" className="btn btn-light btn-lg mt-3">Get Started</a>
-            <a href="/fileuploading" className="btn btn-light btn-lg mt-3 ms-3">Through file</a>
+            <Link to="/forms" className="btn btn-light btn-lg mt-3">Get Started</Link>
+            <Link to="/fileuploading" className="btn btn-light btn-lg mt-3 ms-3">Through file</Link>
           </div>
         </section>
 
