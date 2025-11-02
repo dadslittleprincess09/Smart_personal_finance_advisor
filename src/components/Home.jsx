@@ -40,7 +40,7 @@ import { Link } from "react-router-dom";
                 <div className="card h-100 shadow border border-0">
                   <div className="card-body">
                     <h5 className="card-title text-success">Smart Insights</h5>
-                    <p className="card-text">Receive recommendations based on your spending habits.</p>
+                    <p className="card-text">Get AI-based tips from your spending data to help you save smarter and improve finances.</p>
                   </div>
                 </div>
               </div>
@@ -58,7 +58,7 @@ import { Link } from "react-router-dom";
                 <div className="card h-100 shadow border border-0">
                   <div className="card-body">
                     <h5 className="card-title text-success">Smart Financial Assistantance</h5>
-                    <p className="card-text">Plan monthly budgets and stick to your financial goals.</p>
+                    <p className="card-text">Get quick help to plan budgets and manage your spending effectively.</p>
                   </div>
                 </div>
               </div>
