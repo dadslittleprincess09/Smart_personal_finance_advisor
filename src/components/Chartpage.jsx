@@ -119,11 +119,20 @@ const ChartPage = () => {
           </button>
 
           <button
-            className="btn btn-outline-success shadow-sm"
-            onClick={() => navigate("/aiassistence")}
-          >
-            <i className="bi bi-robot me-2"></i> AI Assistance
-          </button>
+  className="btn btn-outline-success shadow-sm"
+  onClick={() =>
+    navigate("/aiassistence", {
+      state: {
+        expenseData: expenseData,
+        savings: savings,
+        category: category,
+      },
+    })
+  }
+>
+  <i className="bi bi-robot me-2"></i> AI Assistance
+</button>
+
         </div>
 
         {/* Main Content */}

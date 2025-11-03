@@ -196,11 +196,20 @@ export default function Dashboard() {
             <i className="bi bi-speedometer2 me-2"></i> Dashboard
           </button>
           <button
-            className="btn btn-outline-success mb-2 shadow-sm"
-            onClick={() => navigate("/aiassistence")}
-          >
-            <i className="bi bi-robot me-2"></i> AI Assistance
-          </button>
+  className="btn btn-outline-success mb-2 shadow-sm"
+  onClick={() =>
+    navigate("/aiassistence", {
+      state: {
+        expenseData: filteredExpenses,  // all selected category expense values
+        savings: savings,               // calculated savings
+        category: selectedCategories,   // list of chosen categories
+      },
+    })
+  }
+>
+  <i className="bi bi-robot me-2"></i> AI Assistance
+</button>
+
           <button
             className="btn btn-outline-success shadow-sm"
             onClick={() => navigate("/fileuploading")}

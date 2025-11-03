@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-
+import { useLocation } from "react-router-dom";
 const Aiassistence = () => {
+  const location = useLocation();
+  const expenseData = location.state?.expenseData || [];
+  const savings = location.state?.savings || 0;
+  const category = location.state?.category || "N/A";
   const [messages, setMessages] = useState([
     {
       sender: "bot",
@@ -25,7 +29,13 @@ const Aiassistence = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ user_input: input }), 
+        body: JSON.stringify({ user_input: input,
+          json: {
+            expenses: expenseData,
+            savings: savings,
+            category: category,
+          },
+         }), 
       });
 
       const data = await response.json();
