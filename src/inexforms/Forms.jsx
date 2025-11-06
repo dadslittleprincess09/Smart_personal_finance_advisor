@@ -47,33 +47,19 @@
         gender,
         cityTier,
       };
-      // try {
-      //   const response = await fetch("http://127.0.0.1:5000/predict", {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify(formData),
-      //   });
-
-      //   if (!response.ok)
-      //     throw new Error(`HTTP error! Status: ${response.status}`);
-
-      //   const res = await response.json();
-      //   const prediction = res.result;
 
         const expenseData = [
-          { name: "Rent", value: parseFloat(rent) },
-          { name: "Loan", value: parseFloat(loan) },
-          { name: "Insurance", value: parseFloat(insurance) },
-          { name: "Groceries", value: parseFloat(groceries) },
-          { name: "Transport", value: parseFloat(transport) },
-          { name: "Eating Out", value: parseFloat(eatingOut) },
-          { name: "Entertainment", value: parseFloat(entertainment) },
-          { name: "Utilities", value: parseFloat(utilities) },
-          { name: "Healthcare", value: parseFloat(healthcare) },
-          { name: "Education", value: parseFloat(education) },
-          { name: "Miscellaneous", value: parseFloat(miscellaneous) },
+          { name: "Rent", value: parseFloat(rent)||0 },
+          { name: "Loan", value: parseFloat(loan)||0 },
+          { name: "Insurance", value: parseFloat(insurance)||0 },
+          { name: "Groceries", value: parseFloat(groceries)||0 },
+          { name: "Transport", value: parseFloat(transport)||0 },
+          { name: "Eating Out", value: parseFloat(eatingOut)||0 },
+          { name: "Entertainment", value: parseFloat(entertainment)||0 },
+          { name: "Utilities", value: parseFloat(utilities)||0 },
+          { name: "Healthcare", value: parseFloat(healthcare)||0 },
+          { name: "Education", value: parseFloat(education)||0 },
+          { name: "Miscellaneous", value: parseFloat(miscellaneous)||0 },
         ];
         const income = parseFloat(monthlyIncome);
         const desired = parseFloat(desiredSavings);
@@ -86,14 +72,6 @@
         else category = "Healthy";
 
         navigate("/chart", { state: { expenseData,category,totalExpense,savings } });
-
-        //   navigate("/chart", { state: { expenseData, prediction } });
-        // } catch (error) {
-        //   console.error("Error connecting to backend:", error);
-        //   // alert(
-        //   //   "❌ Failed to connect to backend. Make sure Flask is running on port 5000."
-        //   // );
-        // }
     };
 
     return (
@@ -120,7 +98,7 @@
                 className="form-select shadow-sm"
                 value={incomeType}
                 onChange={(e) => setIncomeType(e.target.value)}
-                required
+                
               >
                 <option value="">Select Income Type</option>
                 <option value="Business">💼 Business</option>
@@ -139,7 +117,7 @@
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
                 placeholder="Enter age"
-                required
+                
               />
             </div>
 
@@ -149,7 +127,7 @@
                 className="form-select shadow-sm"
                 value={gender}
                 onChange={(e) => setGender(e.target.value)}
-                required
+                
               >
                 <option value="">Select Gender</option>
                 <option value="1">👨 Male</option>
@@ -166,7 +144,7 @@
                 value={dependents}
                 onChange={(e) => setDependents(e.target.value)}
                 placeholder="Enter number of dependents"
-                required
+                
               />
             </div>
 
@@ -176,7 +154,7 @@
                 className="form-select shadow-sm"
                 value={cityTier}
                 onChange={(e) => setCityTier(e.target.value)}
-                required
+                
               >
                 <option value="">Select City Tier</option>
                 <option value="2">🏙️ Metropolitan</option>
@@ -209,7 +187,7 @@
                   value={value}
                   onChange={(e) => setter(e.target.value)}
                   placeholder={`Enter ${label.toLowerCase()}`}
-                  required
+                  
                 />
               </div>
             ))}

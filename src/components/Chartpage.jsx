@@ -4,15 +4,11 @@ import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Pie, Bar } from "react-chartjs-2";
 import "./ChartPage.css";
-
-
-
 const ChartPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const expenseData = location.state?.expenseData || [];
   const savings = location.state?.savings || 0;
-  // const prediction = location.state?.prediction || 0;
   const category = location.state?.category || "N/A";
   const [selectedCategories, setSelectedCategories] = useState(
     expenseData.map((item) => item.name)
@@ -104,7 +100,7 @@ const ChartPage = () => {
   return (
     <div className="container-fluid mt-4">
       <div className="row">
-        {/* Sidebar */}
+
         {/* Sidebar */}
         <div
           className="d-flex flex-column p-3 bg-light shadow-sm"
